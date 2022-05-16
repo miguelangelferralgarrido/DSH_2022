@@ -40,10 +40,8 @@ public class dictado : MonoBehaviour
         Debug.Log(text);
         if(text == "hola"){
             Debug.Log("Has entrado fiera");
+			
         }
-
-
-		
 	}
 
 	private void DictationRecognizer_DictationHypothesis(string text)
