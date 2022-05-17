@@ -10,6 +10,7 @@ using UnityEngine.SceneManagement;
 public class juegos : MonoBehaviour
 {
     public ValorPais[] paises;
+    public int[] acertados;
     private ValorPais pais;
     
     private int  numPaisActual=-1;
@@ -24,12 +25,16 @@ public class juegos : MonoBehaviour
         //transform.position.y=0.06874365;
         //transform.position.z=0.1635039;
         //transform.position= v;
+        Debug.Log("cagada con las actions");
         nextPais();
         
         actions.Add("Siguiente",siguiente);
         actions.Add("Menu",volver);
         actions.Add("Japon",japon);
         actions.Add("China",china);
+        actions.Add("Egipto",egipto);
+        actions.Add("Estados unidos",estadosUnidos);
+        actions.Add("Irlanda",irlanda);
         keywordRecognizer = new KeywordRecognizer(actions.Keys.ToArray());
 
         keywordRecognizer.OnPhraseRecognized += RecognizedSpeech;
@@ -46,13 +51,15 @@ public class juegos : MonoBehaviour
     }
 
     private void siguiente(){
-        SceneManager.LoadScene("10");
+        nextPais();
     }
     private void japon(){
        
         if(actual.CompareTag("japon")){
             Debug.Log("cagada con las actions");
            nextPais();
+        }else{
+             keywordRecognizer.Start();
         }
     }
      private void china(){
@@ -60,6 +67,36 @@ public class juegos : MonoBehaviour
         if(actual.CompareTag("china")){
             Debug.Log("cagada con las actions");
            nextPais();
+        }
+        else{
+             keywordRecognizer.Start();
+        }
+    }
+    private void egipto(){
+       
+        if(actual.CompareTag("egipto")){
+            Debug.Log("cagada con las actions");
+           nextPais();
+        }else{
+             keywordRecognizer.Start();
+        }
+    }
+    private void estadosUnidos(){
+       
+        if(actual.CompareTag("estados unidos")){
+            Debug.Log("cagada con las actions");
+           nextPais();
+        }else{
+             keywordRecognizer.Start();
+        }
+    }
+    private void irlanda(){
+       
+        if(actual.CompareTag("irlanda")){
+            Debug.Log("cagada con las actions");
+           nextPais();
+        }else{
+             keywordRecognizer.Start();
         }
     }
 

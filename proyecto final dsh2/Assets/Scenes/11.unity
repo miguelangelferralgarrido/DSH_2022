@@ -290,8 +290,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   paises:
-  - pais: {fileID: 7491081477913248762, guid: effa2b4d9888c7641bf6e9dfbb4e240e, type: 3}
-  - pais: {fileID: 1572053355271742863, guid: 55f80bbb67275994caba2dcdfae3eef8, type: 3}
+  - pais: {fileID: 2813954034076500610, guid: a24f1f2ed786da94f9134bb13d210a3a, type: 3}
+  - pais: {fileID: 2913457963054592434, guid: d7b482b9e4b00f74a85d95839dbca96f, type: 3}
+  - pais: {fileID: 811074718444481153, guid: d4d5a4354bf9e464cba212b7f29b5332, type: 3}
+  - pais: {fileID: 8366693332967987720, guid: a10f6c6e087516b448e25efbbfd03ec0, type: 3}
+  - pais: {fileID: 8499398285494662615, guid: bdc28cf63c3fdbc4b948d63a2274d2d3, type: 3}
 --- !u!114 &389201291
 MonoBehaviour:
   m_ObjectHideFlags: 0
