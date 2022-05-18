@@ -9,6 +9,7 @@ using UnityEngine.SceneManagement;
 
 public class juegos : MonoBehaviour
 {
+    public GameObject padre;
     public ValorPais[] paises;
     private List<int> acertados = new List<int>();
     private ValorPais pais;
@@ -132,8 +133,10 @@ public class juegos : MonoBehaviour
             ahora=rn;
             Destroy(actual);
             pais=paises[ rn];
+            
             actual=Instantiate(pais.pais,pais.pais.transform.position,Quaternion.identity);
             actual.transform.rotation=pais.pais.transform.rotation;
+            actual.transform.SetParent(padre.transform);
         }
     }
     // Update is called once per frame

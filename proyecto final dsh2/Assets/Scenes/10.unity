@@ -173,7 +173,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.3529412}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -275,7 +275,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 741279733}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: -10}
+  m_LocalPosition: {x: 0, y: 1, z: -139}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -733,8 +733,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03faa05bf2603314290f45806d84d110, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  paises: []
-  puntos: {fileID: 0}
+  padre: {fileID: 1246039006}
+  paises:
+  - pais: {fileID: 5109282064139210563, guid: cb8fa9201a5b27d4e8c8b9b62ffc8530, type: 3}
+  - pais: {fileID: 2666832297009001825, guid: 4c46d260a03b4714891162d1d58b6a37, type: 3}
+  - pais: {fileID: 4741802280543168944, guid: 1da23c201bf8a8145a41f30618f8938f, type: 3}
+  - pais: {fileID: 8194679550192600238, guid: 6dcfcaf7ecb8f344286d1bbf043d646b, type: 3}
+  - pais: {fileID: 9028539547859054943, guid: 0bd15b7c83e9cec4fb682f267e0839f0, type: 3}
+  puntos: {fileID: 1155178506}
 --- !u!114 &1246039008
 MonoBehaviour:
   m_ObjectHideFlags: 0
