@@ -295,6 +295,7 @@ MonoBehaviour:
   - pais: {fileID: 811074718444481153, guid: d4d5a4354bf9e464cba212b7f29b5332, type: 3}
   - pais: {fileID: 8366693332967987720, guid: a10f6c6e087516b448e25efbbfd03ec0, type: 3}
   - pais: {fileID: 8499398285494662615, guid: bdc28cf63c3fdbc4b948d63a2274d2d3, type: 3}
+  puntos: {fileID: 0}
 --- !u!114 &389201291
 MonoBehaviour:
   m_ObjectHideFlags: 0

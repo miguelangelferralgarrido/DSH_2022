@@ -10,9 +10,11 @@ using UnityEngine.SceneManagement;
 public class juegos : MonoBehaviour
 {
     public ValorPais[] paises;
-    public int[] acertados;
+    private List<int> acertados = new List<int>();
     private ValorPais pais;
-    
+    private int ahora;
+    private int p =0;
+    public TextMeshProUGUI puntos;
     private int  numPaisActual=-1;
     private GameObject actual;
     private Vector3 v=new Vector3((float)-0.2571168,(float)0.06874365,(float)0.3922196);
@@ -21,11 +23,7 @@ public class juegos : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-       //Vector3 (0,0.06874365,0.1635039);
-        //transform.position.y=0.06874365;
-        //transform.position.z=0.1635039;
-        //transform.position= v;
-        Debug.Log("cagada con las actions");
+      
         nextPais();
         
         actions.Add("Siguiente",siguiente);
@@ -57,59 +55,90 @@ public class juegos : MonoBehaviour
        
         if(actual.CompareTag("japon")){
             Debug.Log("cagada con las actions");
+            acertados.Add(ahora);
+            p=p+10;
            nextPais();
-        }else{
-             keywordRecognizer.Start();
         }
     }
      private void china(){
        
         if(actual.CompareTag("china")){
             Debug.Log("cagada con las actions");
+            acertados.Add(ahora);
+            p=p+10;
            nextPais();
         }
-        else{
-             keywordRecognizer.Start();
-        }
+        
     }
     private void egipto(){
        
         if(actual.CompareTag("egipto")){
             Debug.Log("cagada con las actions");
+            acertados.Add(ahora);
+            p=p+10;
            nextPais();
-        }else{
-             keywordRecognizer.Start();
         }
     }
     private void estadosUnidos(){
        
         if(actual.CompareTag("estados unidos")){
             Debug.Log("cagada con las actions");
+            acertados.Add(ahora);
+            p=p+10;
            nextPais();
-        }else{
-             keywordRecognizer.Start();
         }
     }
     private void irlanda(){
        
         if(actual.CompareTag("irlanda")){
             Debug.Log("cagada con las actions");
+            acertados.Add(ahora);
+            p=p+10;
            nextPais();
-        }else{
-             keywordRecognizer.Start();
         }
     }
 
     void nextPais(){
-         numPaisActual++;
-         Destroy(actual);
-        pais=paises[ numPaisActual];
-        actual=Instantiate(pais.pais,pais.pais.transform.position,Quaternion.identity);
-        actual.transform.rotation=pais.pais.transform.rotation;
+        
+        bool a=true,b;
+        int rn=0;
+        while(a){
+            int i =0;
+             rn=(int)UnityEngine.Random.Range(0,paises.Length-1);
+            b=true;
+            if(acertados.Count==paises.Length)
+            a=false;
+            else{
+                if(acertados.Count!=0){
+                    while(i<acertados.Count && b){
+                        if(rn==acertados[i]){
+                            b=false;
+                        }
+                        i++;
+                    }
+                    if(b){
+                        a=false;
+                    }
+                }
+                else a=false;
+            }
+
+        }
+        if(acertados.Capacity==paises.Length){
+            Debug.Log("Fin del juego");
+            Destroy(actual);
+
+        }else{
+            ahora=rn;
+            Destroy(actual);
+            pais=paises[ rn];
+            actual=Instantiate(pais.pais,pais.pais.transform.position,Quaternion.identity);
+            actual.transform.rotation=pais.pais.transform.rotation;
+        }
     }
     // Update is called once per frame
     void Update()
     {
-        
+        puntos.text= p.ToString();
     }
 }
