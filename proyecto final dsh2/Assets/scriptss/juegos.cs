@@ -96,13 +96,28 @@ public class juegos : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
+ private void grecia(){
+       
+        if(actual.CompareTag("grecia")){
+            acertados.Add(ahora);
+            p=p+10;
+           nextPais();
+        }else{
+            if(p!=0)
+             p=p-10;
+        }
+ }
     private void japon(){
        
         if(actual.CompareTag("japon")){
             acertados.Add(ahora);
             p=p+10;
            nextPais();
+        }else{
+            if(p!=0)
+             p=p-10;
         }
+
     }
         private void alemania(){
        
@@ -110,6 +125,9 @@ public class juegos : MonoBehaviour
             acertados.Add(ahora);
             p=p+10;
            nextPais();
+        }else{
+            if(p!=0)
+             p=p-10;
         }
     }
         private void italia(){
@@ -118,6 +136,9 @@ public class juegos : MonoBehaviour
             acertados.Add(ahora);
             p=p+10;
            nextPais();
+        }else{
+            if(p!=0)
+             p=p-10;
         }
     }
             private void mejico(){
@@ -126,6 +147,9 @@ public class juegos : MonoBehaviour
             acertados.Add(ahora);
             p=p+10;
            nextPais();
+        }else{
+            if(p!=0)
+             p=p-10;
         }
     }
             private void españa(){
@@ -134,6 +158,9 @@ public class juegos : MonoBehaviour
             acertados.Add(ahora);
             p=p+10;
            nextPais();
+        }else{
+            if(p!=0)
+             p=p-10;
         }
     }
             private void francia(){
@@ -142,6 +169,9 @@ public class juegos : MonoBehaviour
             acertados.Add(ahora);
             p=p+10;
            nextPais();
+        }else{
+            if(p!=0)
+             p=p-10;
         }
     }
         private void portugal(){
@@ -150,6 +180,9 @@ public class juegos : MonoBehaviour
             acertados.Add(ahora);
             p=p+10;
            nextPais();
+        }else{
+            if(p!=0)
+             p=p-10;
         }
     }
         private void rusia(){
@@ -158,6 +191,9 @@ public class juegos : MonoBehaviour
             acertados.Add(ahora);
             p=p+10;
            nextPais();
+        }else{
+            if(p!=0)
+             p=p-10;
         }
     }
         private void inglaterra(){
@@ -166,6 +202,9 @@ public class juegos : MonoBehaviour
             acertados.Add(ahora);
             p=p+10;
            nextPais();
+        }else{
+            if(p!=0)
+             p=p-10;
         }
     }
      private void china(){
@@ -174,6 +213,9 @@ public class juegos : MonoBehaviour
             acertados.Add(ahora);
             p=p+10;
            nextPais();
+        }else{
+            if(p!=0)
+             p=p-10;
         }
         
     }
@@ -183,6 +225,9 @@ public class juegos : MonoBehaviour
             acertados.Add(ahora);
             p=p+10;
            nextPais();
+        }else{
+            if(p!=0)
+             p=p-10;
         }
     }
     private void estadosUnidos(){
@@ -191,6 +236,9 @@ public class juegos : MonoBehaviour
             acertados.Add(ahora);
             p=p+10;
            nextPais();
+        }else{
+            if(p!=0)
+             p=p-10;
         }
     }
     private void irlanda(){
@@ -199,6 +247,9 @@ public class juegos : MonoBehaviour
             acertados.Add(ahora);
             p=p+10;
            nextPais();
+        }else{
+            if(p!=0)
+             p=p-10;
         }
     }
 
