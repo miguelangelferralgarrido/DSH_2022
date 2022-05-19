@@ -64,7 +64,8 @@ public class juegos : MonoBehaviour
         keywordRecognizer = new KeywordRecognizer(actions.Keys.ToArray());
 
         keywordRecognizer.OnPhraseRecognized += RecognizedSpeech;
-        keywordRecognizer.Start();    
+        keywordRecognizer.Start();  
+           
         }
 
     private void RecognizedSpeech(PhraseRecognizedEventArgs speech){
@@ -84,6 +85,7 @@ public class juegos : MonoBehaviour
     private void pausa(){
         Time.timeScale = 0f;
         menuPausa.SetActive(true);
+        
     }
 
     private void reanudar(){
@@ -97,7 +99,8 @@ public class juegos : MonoBehaviour
     }
 
  private void grecia(){
-       
+    if(Time.timeScale != 0f)
+    {
         if(actual.CompareTag("grecia")){
             acertados.Add(ahora);
             p=p+10;
@@ -106,9 +109,12 @@ public class juegos : MonoBehaviour
             if(p!=0)
              p=p-10;
         }
+    }
+        
  }
     private void japon(){
-       
+       if(Time.timeScale != 0f)
+    { 
         if(actual.CompareTag("japon")){
             acertados.Add(ahora);
             p=p+10;
@@ -117,10 +123,11 @@ public class juegos : MonoBehaviour
             if(p!=0)
              p=p-10;
         }
-
+    }
     }
         private void alemania(){
-       
+        if(Time.timeScale != 0f)
+    {
         if(actual.CompareTag("alemania")){
             acertados.Add(ahora);
             p=p+10;
@@ -130,8 +137,10 @@ public class juegos : MonoBehaviour
              p=p-10;
         }
     }
+    }
         private void italia(){
-       
+        if(Time.timeScale != 0f)
+    {
         if(actual.CompareTag("italia")){
             acertados.Add(ahora);
             p=p+10;
@@ -141,8 +150,10 @@ public class juegos : MonoBehaviour
              p=p-10;
         }
     }
+    }
             private void mejico(){
-       
+        if(Time.timeScale != 0f)
+    {
         if(actual.CompareTag("mexico")){
             acertados.Add(ahora);
             p=p+10;
@@ -152,8 +163,10 @@ public class juegos : MonoBehaviour
              p=p-10;
         }
     }
+    }
             private void españa(){
-       
+        if(Time.timeScale != 0f)
+    {
         if(actual.CompareTag("españa")){
             acertados.Add(ahora);
             p=p+10;
@@ -163,8 +176,10 @@ public class juegos : MonoBehaviour
              p=p-10;
         }
     }
+    }
             private void francia(){
-       
+        if(Time.timeScale != 0f)
+    {
         if(actual.CompareTag("francia")){
             acertados.Add(ahora);
             p=p+10;
@@ -174,8 +189,10 @@ public class juegos : MonoBehaviour
              p=p-10;
         }
     }
+    }
         private void portugal(){
-       
+        if(Time.timeScale != 0f)
+    {
         if(actual.CompareTag("portugal")){
             acertados.Add(ahora);
             p=p+10;
@@ -185,8 +202,10 @@ public class juegos : MonoBehaviour
              p=p-10;
         }
     }
+    }
         private void rusia(){
-       
+        if(Time.timeScale != 0f)
+    {
         if(actual.CompareTag("rusia")){
             acertados.Add(ahora);
             p=p+10;
@@ -196,8 +215,10 @@ public class juegos : MonoBehaviour
              p=p-10;
         }
     }
+    }
         private void inglaterra(){
-       
+        if(Time.timeScale != 0f)
+    {
         if(actual.CompareTag("inglaterra")){
             acertados.Add(ahora);
             p=p+10;
@@ -207,8 +228,10 @@ public class juegos : MonoBehaviour
              p=p-10;
         }
     }
+        }
      private void china(){
-       
+        if(Time.timeScale != 0f)
+    {
         if(actual.CompareTag("china")){
             acertados.Add(ahora);
             p=p+10;
@@ -217,10 +240,12 @@ public class juegos : MonoBehaviour
             if(p!=0)
              p=p-10;
         }
+    }
         
     }
     private void egipto(){
-       
+        if(Time.timeScale != 0f)
+    {
         if(actual.CompareTag("egipto")){
             acertados.Add(ahora);
             p=p+10;
@@ -230,8 +255,10 @@ public class juegos : MonoBehaviour
              p=p-10;
         }
     }
+    }
     private void estadosUnidos(){
-       
+        if(Time.timeScale != 0f)
+    {
         if(actual.CompareTag("estados unidos")){
             acertados.Add(ahora);
             p=p+10;
@@ -241,8 +268,10 @@ public class juegos : MonoBehaviour
              p=p-10;
         }
     }
+    }
     private void irlanda(){
-       
+        if(Time.timeScale != 0f)
+    {
         if(actual.CompareTag("irlanda")){
             acertados.Add(ahora);
             p=p+10;
@@ -251,6 +280,7 @@ public class juegos : MonoBehaviour
             if(p!=0)
              p=p-10;
         }
+    }
     }
 
     void nextPais(){
@@ -286,7 +316,7 @@ public class juegos : MonoBehaviour
             estrella1.SetActive(true);
             estrella2.SetActive(true);
             estrella3.SetActive(true);
-            
+            keywordRecognizer.Stop();
             menufinal.SetActive(true);
             Destroy(actual);
 
