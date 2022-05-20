@@ -189,27 +189,6 @@ public class juegos : MonoBehaviour
         }
     }    
  }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
   private void japon(){
     if(Time.timeScale != 0f)
     {
