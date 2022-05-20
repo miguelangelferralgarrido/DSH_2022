@@ -441,6 +441,8 @@ public class juegos : MonoBehaviour
 
     private void pista(){
         restante = restante -5f;
+        if(restante < 0)
+            restante = 0f;
         numpista++;
         pistas.text=NombreActual.Substring(0,numpista);
     }
@@ -508,7 +510,7 @@ public class juegos : MonoBehaviour
                 estrella1.SetActive(true);
                 estrella2.SetActive(true);
             }
-            if(acertados.Count > 15){
+            if(acertados.Count > 10){
                 estrella1.SetActive(true);
                 estrella2.SetActive(true);
                 estrella3.SetActive(true);
@@ -522,7 +524,11 @@ public class juegos : MonoBehaviour
 		}
 		int tempMin = Mathf.FloorToInt(restante / 60);
 		int tempSeg = Mathf.FloorToInt(restante % 60);
-		tiempo.text = string.Format("{00:00}:{01:00}", tempMin, tempSeg);
+        if(tempMin < 0 && tempSeg < 0){
+            tiempo.text = string.Format("{00:00}:{01:00}", 0, 0);
+        }else{
+		    tiempo.text = string.Format("{00:00}:{01:00}", tempMin, tempSeg);
 		}
     }
+}
 }
