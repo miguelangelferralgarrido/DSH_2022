@@ -19,6 +19,7 @@ public class menubienvenida : MonoBehaviour
         actions.Add("Jugar",jugar);
         actions.Add("Creditos",creditos);
         actions.Add("Salir",salir);
+        actions.Add("Menu",menu);
         keywordRecognizer = new KeywordRecognizer(actions.Keys.ToArray());
         keywordRecognizer.OnPhraseRecognized += RecognizedSpeech;
         keywordRecognizer.Start();    
@@ -28,12 +29,16 @@ public class menubienvenida : MonoBehaviour
         Debug.Log(speech.text);
         actions[speech.text].Invoke();
     }
+    
+    private void menu(){
+        SceneManager.LoadScene("MEnuBienvenida");
 
+    }    
     
     private void jugar(){
         SceneManager.LoadScene("Menu");
-
     }
+
 
     private void creditos(){
     SceneManager.LoadScene("creditos");

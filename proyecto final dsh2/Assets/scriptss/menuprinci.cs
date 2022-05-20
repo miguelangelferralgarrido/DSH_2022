@@ -16,10 +16,10 @@ public class menuprinci : MonoBehaviour
     void Start()
     {
 
-        actions.Add("bandera",uno);
-        actions.Add("capital",dos);
-        actions.Add("tipico",tres);
-        actions.Add("menu",volver);
+        actions.Add("Banderas",uno);
+        actions.Add("Capitales",dos);
+        actions.Add("Cosas típicas",tres);
+        actions.Add("menú",volver);
         keywordRecognizer = new KeywordRecognizer(actions.Keys.ToArray());
         keywordRecognizer.OnPhraseRecognized += RecognizedSpeech;
         keywordRecognizer.Start();    

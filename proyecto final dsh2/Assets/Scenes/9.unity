@@ -1064,7 +1064,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 86cfe5b433334304c8d25e636237bc70, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.543
+  m_Volume: 0.03
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -3858,7 +3858,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: -297, y: 608}
+  m_AnchoredPosition: {x: -446, y: 608}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2006759881
@@ -3881,18 +3881,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Acciones:
-
-    - Pausa
-
-    - Reiniciar
-
-    - Siguiente(siguiente pais)
-
-    -
-    Pista
-
-    - Salir'
+  m_text: "Acciones:\n- Pausa\n- Reiniciar\n- Siguiente(siguiente pais)\n- Pista\n-
+    Men\xFA(Salir)"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 328d924ad824900438da40da5d18b5f5, type: 2}
   m_sharedMaterial: {fileID: 6156497990967077494, guid: 328d924ad824900438da40da5d18b5f5, type: 2}
