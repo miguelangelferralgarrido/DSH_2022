@@ -55,7 +55,15 @@ public class juegos : MonoBehaviour
         actions.Add("Mejico",mejico);
         actions.Add("España",españa);
         actions.Add("Francia",francia);
-        actions.Add("Rusia",rusia);
+        actions.Add("Rusia",rusia);        
+        actions.Add("Mongolia",mongolia);
+        actions.Add("Hungria",hungria);
+        actions.Add("Peru",peru);        
+        actions.Add("Colombia",colombia);
+        actions.Add("Ucrania",ucrania);
+        actions.Add("Polonia",polonia);
+        actions.Add("Grecia",grecia);
+        actions.Add("Bélgica",belgica);
         actions.Add("Estados unidos",estadosUnidos);
         actions.Add("Irlanda",irlanda);
         actions.Add("Pausa",pausa);
@@ -109,13 +117,132 @@ public class juegos : MonoBehaviour
             if(p!=0)
              p=p-10;
         }
-    }
-        
+    }    
  }
-    private void japon(){
+
+  private void belgica(){
+    if(Time.timeScale != 0f)
+    {
+        if(actual.CompareTag("belgica")){
+            acertados.Add(ahora);
+            p=p+10;
+           nextPais();
+        }else{
+            if(p!=0)
+             p=p-10;
+        }
+    }    
+ }
+
+ private void polonia(){
+    if(Time.timeScale != 0f)
+    {
+        if(actual.CompareTag("polonia")){
+            acertados.Add(ahora);
+            p=p+10;
+           nextPais();
+        }else{
+            if(p!=0)
+             p=p-10;
+        }
+    }    
+ }
+
+  private void peru(){
+    if(Time.timeScale != 0f)
+    {
+        if(actual.CompareTag("peru")){
+            acertados.Add(ahora);
+            p=p+10;
+           nextPais();
+        }else{
+            if(p!=0)
+             p=p-10;
+        }
+    }    
+ }
+
+  private void ucrania(){
+    if(Time.timeScale != 0f)
+    {
+        if(actual.CompareTag("ucrania")){
+            acertados.Add(ahora);
+            p=p+10;
+           nextPais();
+        }else{
+            if(p!=0)
+             p=p-10;
+        }
+    }    
+ }
+
+  private void colombia(){
+    if(Time.timeScale != 0f)
+    {
+        if(actual.CompareTag("colombia")){
+            acertados.Add(ahora);
+            p=p+10;
+           nextPais();
+        }else{
+            if(p!=0)
+             p=p-10;
+        }
+    }    
+ }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  private void japon(){
+    if(Time.timeScale != 0f)
+    {
+        if(actual.CompareTag("japon")){
+            acertados.Add(ahora);
+            p=p+10;
+           nextPais();
+        }else{
+            if(p!=0)
+             p=p-10;
+        }
+    }    
+ }
+ private void mongolia(){
+    if(Time.timeScale != 0f)
+    {
+        if(actual.CompareTag("ulan bator")){
+            acertados.Add(ahora);
+            p=p+10;
+           nextPais();
+        }else{
+            if(p!=0)
+             p=p-10;
+        }
+    }
+ }
+
+
+
+    private void hungria(){
        if(Time.timeScale != 0f)
     { 
-        if(actual.CompareTag("japon")){
+        if(actual.CompareTag("hungria")){
             acertados.Add(ahora);
             p=p+10;
            nextPais();
@@ -316,7 +443,6 @@ public class juegos : MonoBehaviour
             estrella1.SetActive(true);
             estrella2.SetActive(true);
             estrella3.SetActive(true);
-            keywordRecognizer.Stop();
             menufinal.SetActive(true);
             Destroy(actual);
 
