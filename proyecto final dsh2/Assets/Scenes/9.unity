@@ -1071,24 +1071,39 @@ MonoBehaviour:
   seg: 50
   tiempo: {fileID: 790832531}
   tiempofinal: {fileID: 1335276443}
-  objetos: {fileID: 0}
   padre: {fileID: 482325970}
   paises:
   - pais: {fileID: 2652034227682963863, guid: 9cc2c8ad66185ab4da0b06978ea80dc5, type: 3}
+    nombre: Belgica
   - pais: {fileID: 8682027351713412513, guid: 2d397e6c24cf98e4e9cb247107ce21b3, type: 3}
+    nombre: China
   - pais: {fileID: 2986893410391574684, guid: 62bd59228f2eae04baa59b6dda709568, type: 3}
+    nombre: Colombia
   - pais: {fileID: 2462244028612375766, guid: 4aa7353ba060ef14f95e4f72c49b413f, type: 3}
+    nombre: Egipto
   - pais: {fileID: 6210906860368539583, guid: 6aa6140f9d03df3409c576ff501355af, type: 3}
+    nombre: Japon
   - pais: {fileID: 3339433994315137860, guid: 72527574ea2f0614d9fcbd8e7ed23aff, type: 3}
+    nombre: Alemania
   - pais: {fileID: 8111650230244497891, guid: 03d7e241a611cdf47b4df996bb47ed99, type: 3}
+    nombre: Estados Unidos
   - pais: {fileID: 9174882805830878903, guid: dc2f6a430a16e3647a3186f6d57aa204, type: 3}
+    nombre: Francia
   - pais: {fileID: 4402430391659876900, guid: dd8f3a97e05b81742844d7a9a5debd9a, type: 3}
+    nombre: Irlanda
   - pais: {fileID: 3864974188039115443, guid: ec6b8bd80773fd841afd8024b2ad26d1, type: 3}
+    nombre: Italia
   - pais: {fileID: 6838645894830504242, guid: 8bb7160bfdd7baf46b7d29130632a6e6, type: 3}
+    nombre: Peru
   - pais: {fileID: 8608436326548118622, guid: aebc26388e0fb534dac1dbfdc90f7aaa, type: 3}
+    nombre: Polonia
   - pais: {fileID: 1024469332299179984, guid: b20e68ee9c8fe68418d301fe7a4c44a1, type: 3}
+    nombre: Rusia
   - pais: {fileID: 7848567662694821055, guid: 91d5d72b9819cd244abde7284092c87a, type: 3}
+    nombre: Ucrania
   - pais: {fileID: 8249589130560635649, guid: 60e9c01c399a00e4499054d1fdc233d6, type: 3}
+    nombre: "Espa\xF1a"
+  pistas: {fileID: 1865433863}
   puntos: {fileID: 1061714386}
   puntosfinal: {fileID: 513830281}
 --- !u!1 &490806879

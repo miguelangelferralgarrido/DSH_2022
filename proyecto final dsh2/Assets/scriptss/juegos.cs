@@ -24,16 +24,20 @@ public class juegos : MonoBehaviour
 		restante = (min * 60) + seg;
 		enMarcha = true;
 	}
-    public GameObject objetos;
     public GameObject padre;
     public ValorPais[] paises;
     private List<int> acertados = new List<int>();
     private ValorPais pais;
+
+    private String NombreActual;
+
+    private int numpista=0;
+
+    public TextMeshProUGUI pistas;
     private int ahora;
     private int p =0;
     public TextMeshProUGUI puntos;
     public TextMeshProUGUI puntosfinal;
-    private int  numPaisActual=-1;
     private GameObject actual;
     private Vector3 v=new Vector3((float)-0.2571168,(float)0.06874365,(float)0.3922196);
     private KeywordRecognizer keywordRecognizer;
@@ -69,6 +73,7 @@ public class juegos : MonoBehaviour
         actions.Add("Pausa",pausa);
         actions.Add("Reanudar",reanudar);
         actions.Add("Reiniciar",reiniciar);
+        actions.Add("pista",pista);
         keywordRecognizer = new KeywordRecognizer(actions.Keys.ToArray());
 
         keywordRecognizer.OnPhraseRecognized += RecognizedSpeech;
@@ -389,6 +394,11 @@ public class juegos : MonoBehaviour
     }
     }
 
+    private void pista(){
+        restante = restante -5f;
+        numpista++;
+        pistas.text=NombreActual.Substring(0,numpista);
+    }
     void nextPais(){
         
         bool a=true,b;
@@ -427,9 +437,11 @@ public class juegos : MonoBehaviour
 
         }else{
             ahora=rn;
+            numpista=0;
+            pistas.text=" ";
             Destroy(actual);
             pais=paises[ rn];
-            
+            NombreActual=pais.nombre;
             actual=Instantiate(pais.pais,pais.pais.transform.position,Quaternion.identity);
             actual.transform.rotation=pais.pais.transform.rotation;
             actual.transform.SetParent(padre.transform);

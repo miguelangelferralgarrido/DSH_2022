@@ -938,18 +938,32 @@ MonoBehaviour:
   padre: {fileID: 389201289}
   paises:
   - pais: {fileID: 2813954034076500610, guid: a24f1f2ed786da94f9134bb13d210a3a, type: 3}
+    nombre: China
   - pais: {fileID: 2913457963054592434, guid: d7b482b9e4b00f74a85d95839dbca96f, type: 3}
+    nombre: Egipto
   - pais: {fileID: 811074718444481153, guid: d4d5a4354bf9e464cba212b7f29b5332, type: 3}
+    nombre: Japon
   - pais: {fileID: 4755423149624743143, guid: a10f6c6e087516b448e25efbbfd03ec0, type: 3}
+    nombre: Estados Unidos
   - pais: {fileID: 1292946251529482496, guid: bdc28cf63c3fdbc4b948d63a2274d2d3, type: 3}
+    nombre: Irlanda
   - pais: {fileID: 9162543435898933823, guid: 3c744cda27ebd124896e7f0bd5271a35, type: 3}
+    nombre: Inglaterra
   - pais: {fileID: 696630840063727619, guid: 565e4aec92788194ba19361a4c4854ea, type: 3}
+    nombre: Francia
   - pais: {fileID: 3561831964167282668, guid: abf2c55820a44b94cac834166923789c, type: 3}
+    nombre: Mexico
   - pais: {fileID: 9126788553749373268, guid: 44c6d4a5d7657f648b0d8b234ee66885, type: 3}
+    nombre: Grecia
   - pais: {fileID: 927228718301728149, guid: 8c2f9fb6f4185db44ac7905a8bed8db4, type: 3}
+    nombre: "Espa\xF1a"
   - pais: {fileID: 490740964398713978, guid: c4dd487a3c3602b47a7986d1b15d24f5, type: 3}
+    nombre: Italia
   - pais: {fileID: 1479390392066258078, guid: cc9173e5a5f11f74d8110089a9ebe284, type: 3}
+    nombre: Alemania
   - pais: {fileID: 8414099425918297856, guid: c3d6b9474b8053649a35f4b69308fd51, type: 3}
+    nombre: Portugal
+  pistas: {fileID: 307518089}
   puntos: {fileID: 819403740}
   puntosfinal: {fileID: 582996640}
 --- !u!114 &389201291

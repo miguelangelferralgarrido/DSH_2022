@@ -6,4 +6,5 @@ public class ValorPais
 {
 public GameObject pais;
 
+public string nombre;
 }

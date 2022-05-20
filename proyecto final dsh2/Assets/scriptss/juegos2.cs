@@ -27,7 +27,7 @@ public class juegos2 : MonoBehaviour
     private int ahora;
     private int p =0;
     public TextMeshProUGUI puntos;
-    private int  numPaisActual=-1;
+    
     private GameObject actual;
     private Vector3 v=new Vector3((float)-0.2571168,(float)0.06874365,(float)0.3922196);
     private KeywordRecognizer keywordRecognizer;
