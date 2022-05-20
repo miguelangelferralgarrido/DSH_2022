@@ -20,6 +20,9 @@ public class juegos : MonoBehaviour
 	private float restante;
 	private bool enMarcha;
 
+    public AudioClip exito=null;
+    public AudioClip error=null;
+
 	private void Awake() {
 		restante = (min * 60) + seg;
 		enMarcha = true;
@@ -44,8 +47,8 @@ public class juegos : MonoBehaviour
     private Dictionary<string, Action> actions = new Dictionary<string, Action>();
     // Start is called before the first frame update
     void Start()
-    {
-      
+    {      
+
         nextPais();
         actions.Add("Siguiente",siguiente);
         actions.Add("Menu",volver);
@@ -116,9 +119,11 @@ public class juegos : MonoBehaviour
     {
         if(actual.CompareTag("grecia")){
             acertados.Add(ahora);
+            AudioSource.PlayClipAtPoint(exito,Vector3.zero,1f);
             p=p+10;
            nextPais();
         }else{
+            AudioSource.PlayClipAtPoint(error,Vector3.zero,1f);
             if(p!=0)
              p=p-10;
         }
@@ -130,9 +135,11 @@ public class juegos : MonoBehaviour
     {
         if(actual.CompareTag("belgica")){
             acertados.Add(ahora);
+            AudioSource.PlayClipAtPoint(exito,Vector3.zero,1f);
             p=p+10;
            nextPais();
         }else{
+             AudioSource.PlayClipAtPoint(error,Vector3.zero,1f);
             if(p!=0)
              p=p-10;
         }
@@ -144,9 +151,11 @@ public class juegos : MonoBehaviour
     {
         if(actual.CompareTag("polonia")){
             acertados.Add(ahora);
+            AudioSource.PlayClipAtPoint(exito,Vector3.zero,1f);
             p=p+10;
            nextPais();
         }else{
+             AudioSource.PlayClipAtPoint(error,Vector3.zero,1f);
             if(p!=0)
              p=p-10;
         }
@@ -158,9 +167,11 @@ public class juegos : MonoBehaviour
     {
         if(actual.CompareTag("peru")){
             acertados.Add(ahora);
+           AudioSource.PlayClipAtPoint(exito,Vector3.zero,1f);
             p=p+10;
            nextPais();
         }else{
+             AudioSource.PlayClipAtPoint(error,Vector3.zero,1f);
             if(p!=0)
              p=p-10;
         }
@@ -172,9 +183,11 @@ public class juegos : MonoBehaviour
     {
         if(actual.CompareTag("ucrania")){
             acertados.Add(ahora);
+           AudioSource.PlayClipAtPoint(exito,Vector3.zero,1f);
             p=p+10;
            nextPais();
         }else{
+             AudioSource.PlayClipAtPoint(error,Vector3.zero,1f);
             if(p!=0)
              p=p-10;
         }
@@ -186,9 +199,11 @@ public class juegos : MonoBehaviour
     {
         if(actual.CompareTag("colombia")){
             acertados.Add(ahora);
+            AudioSource.PlayClipAtPoint(exito,Vector3.zero,1f);
             p=p+10;
            nextPais();
         }else{
+             AudioSource.PlayClipAtPoint(error,Vector3.zero,1f);
             if(p!=0)
              p=p-10;
         }
@@ -199,9 +214,11 @@ public class juegos : MonoBehaviour
     {
         if(actual.CompareTag("japon")){
             acertados.Add(ahora);
+            AudioSource.PlayClipAtPoint(exito,Vector3.zero,1f);
             p=p+10;
            nextPais();
         }else{
+             AudioSource.PlayClipAtPoint(error,Vector3.zero,1f);
             if(p!=0)
              p=p-10;
         }
@@ -212,9 +229,11 @@ public class juegos : MonoBehaviour
     {
         if(actual.CompareTag("ulan bator")){
             acertados.Add(ahora);
+            AudioSource.PlayClipAtPoint(exito,Vector3.zero,1f);
             p=p+10;
            nextPais();
         }else{
+             AudioSource.PlayClipAtPoint(error,Vector3.zero,1f);
             if(p!=0)
              p=p-10;
         }
@@ -228,9 +247,11 @@ public class juegos : MonoBehaviour
     { 
         if(actual.CompareTag("hungria")){
             acertados.Add(ahora);
+            AudioSource.PlayClipAtPoint(exito,Vector3.zero,1f);
             p=p+10;
            nextPais();
         }else{
+             AudioSource.PlayClipAtPoint(error,Vector3.zero,1f);
             if(p!=0)
              p=p-10;
         }
@@ -241,9 +262,11 @@ public class juegos : MonoBehaviour
     {
         if(actual.CompareTag("alemania")){
             acertados.Add(ahora);
+            AudioSource.PlayClipAtPoint(exito,Vector3.zero,1f);
             p=p+10;
            nextPais();
         }else{
+             AudioSource.PlayClipAtPoint(error,Vector3.zero,1f);
             if(p!=0)
              p=p-10;
         }
@@ -254,9 +277,11 @@ public class juegos : MonoBehaviour
     {
         if(actual.CompareTag("italia")){
             acertados.Add(ahora);
+           AudioSource.PlayClipAtPoint(exito,Vector3.zero,1f);
             p=p+10;
            nextPais();
         }else{
+             AudioSource.PlayClipAtPoint(error,Vector3.zero,1f);
             if(p!=0)
              p=p-10;
         }
@@ -267,9 +292,11 @@ public class juegos : MonoBehaviour
     {
         if(actual.CompareTag("mexico")){
             acertados.Add(ahora);
+            AudioSource.PlayClipAtPoint(exito,Vector3.zero,1f);
             p=p+10;
            nextPais();
         }else{
+             AudioSource.PlayClipAtPoint(error,Vector3.zero,1f);
             if(p!=0)
              p=p-10;
         }
@@ -280,9 +307,11 @@ public class juegos : MonoBehaviour
     {
         if(actual.CompareTag("españa")){
             acertados.Add(ahora);
+            AudioSource.PlayClipAtPoint(exito,Vector3.zero,1f);
             p=p+10;
            nextPais();
         }else{
+             AudioSource.PlayClipAtPoint(error,Vector3.zero,1f);
             if(p!=0)
              p=p-10;
         }
@@ -293,9 +322,11 @@ public class juegos : MonoBehaviour
     {
         if(actual.CompareTag("francia")){
             acertados.Add(ahora);
+            AudioSource.PlayClipAtPoint(exito,Vector3.zero,1f);
             p=p+10;
            nextPais();
         }else{
+             AudioSource.PlayClipAtPoint(error,Vector3.zero,1f);
             if(p!=0)
              p=p-10;
         }
@@ -306,9 +337,11 @@ public class juegos : MonoBehaviour
     {
         if(actual.CompareTag("portugal")){
             acertados.Add(ahora);
+            AudioSource.PlayClipAtPoint(exito,Vector3.zero,1f);
             p=p+10;
            nextPais();
         }else{
+             AudioSource.PlayClipAtPoint(error,Vector3.zero,1f);
             if(p!=0)
              p=p-10;
         }
@@ -319,9 +352,11 @@ public class juegos : MonoBehaviour
     {
         if(actual.CompareTag("rusia")){
             acertados.Add(ahora);
+            AudioSource.PlayClipAtPoint(exito,Vector3.zero,1f);
             p=p+10;
            nextPais();
         }else{
+             AudioSource.PlayClipAtPoint(error,Vector3.zero,1f);
             if(p!=0)
              p=p-10;
         }
@@ -332,9 +367,11 @@ public class juegos : MonoBehaviour
     {
         if(actual.CompareTag("inglaterra")){
             acertados.Add(ahora);
+           AudioSource.PlayClipAtPoint(exito,Vector3.zero,1f);
             p=p+10;
            nextPais();
         }else{
+             AudioSource.PlayClipAtPoint(error,Vector3.zero,1f);
             if(p!=0)
              p=p-10;
         }
@@ -345,9 +382,11 @@ public class juegos : MonoBehaviour
     {
         if(actual.CompareTag("china")){
             acertados.Add(ahora);
+            AudioSource.PlayClipAtPoint(exito,Vector3.zero,1f);
             p=p+10;
            nextPais();
         }else{
+             AudioSource.PlayClipAtPoint(error,Vector3.zero,1f);
             if(p!=0)
              p=p-10;
         }
@@ -359,9 +398,11 @@ public class juegos : MonoBehaviour
     {
         if(actual.CompareTag("egipto")){
             acertados.Add(ahora);
+            AudioSource.PlayClipAtPoint(exito,Vector3.zero,1f);
             p=p+10;
            nextPais();
         }else{
+             AudioSource.PlayClipAtPoint(error,Vector3.zero,1f);
             if(p!=0)
              p=p-10;
         }
@@ -372,9 +413,11 @@ public class juegos : MonoBehaviour
     {
         if(actual.CompareTag("estados unidos")){
             acertados.Add(ahora);
+           AudioSource.PlayClipAtPoint(exito,Vector3.zero,1f);
             p=p+10;
            nextPais();
         }else{
+             AudioSource.PlayClipAtPoint(error,Vector3.zero,1f);
             if(p!=0)
              p=p-10;
         }
@@ -385,9 +428,11 @@ public class juegos : MonoBehaviour
     {
         if(actual.CompareTag("irlanda")){
             acertados.Add(ahora);
+           AudioSource.PlayClipAtPoint(exito,Vector3.zero,1f);
             p=p+10;
            nextPais();
         }else{
+             AudioSource.PlayClipAtPoint(error,Vector3.zero,1f);
             if(p!=0)
              p=p-10;
         }
