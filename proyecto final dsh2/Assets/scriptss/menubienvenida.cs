@@ -7,7 +7,7 @@ using UnityEngine.Windows.Speech;
 using TMPro;
 using UnityEngine.SceneManagement;
 
-public class menuprinci : MonoBehaviour
+public class menubienvenida : MonoBehaviour
 {
 
     private KeywordRecognizer keywordRecognizer;
@@ -16,10 +16,9 @@ public class menuprinci : MonoBehaviour
     void Start()
     {
 
-        actions.Add("bandera",uno);
-        actions.Add("capital",dos);
-        actions.Add("tipico",tres);
-        actions.Add("menu",volver);
+        actions.Add("Jugar",jugar);
+        actions.Add("Creditos",creditos);
+        actions.Add("Salir",salir);
         keywordRecognizer = new KeywordRecognizer(actions.Keys.ToArray());
         keywordRecognizer.OnPhraseRecognized += RecognizedSpeech;
         keywordRecognizer.Start();    
@@ -30,21 +29,18 @@ public class menuprinci : MonoBehaviour
         actions[speech.text].Invoke();
     }
 
-        private void volver(){
-        SceneManager.LoadScene("MEnuBienvenida");
-
-    }
-    private void uno(){
-        SceneManager.LoadScene("9");
+    
+    private void jugar(){
+        SceneManager.LoadScene("Menu");
 
     }
 
-    private void dos(){
-    SceneManager.LoadScene("10");
+    private void creditos(){
+    SceneManager.LoadScene("creditos");
     }
 
-    private void tres(){
-    SceneManager.LoadScene("11");
+    private void salir(){
+    Debug.Log("Saliendo del juego");
     }
 
     // Update is called once per frame
@@ -53,3 +49,5 @@ public class menuprinci : MonoBehaviour
         
     }
 }
+
+
