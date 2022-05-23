@@ -73,6 +73,7 @@ public class juegos : MonoBehaviour
         actions.Add("Bélgica",belgica);
         actions.Add("Estados unidos",estadosUnidos);
         actions.Add("Irlanda",irlanda);
+        actions.Add("Suecia",suecia);
         actions.Add("Pausa",pausa);
         actions.Add("Reanudar",reanudar);
         actions.Add("Reiniciar",reiniciar);
@@ -134,6 +135,22 @@ public class juegos : MonoBehaviour
     if(Time.timeScale != 0f)
     {
         if(actual.CompareTag("belgica")){
+            acertados.Add(ahora);
+            AudioSource.PlayClipAtPoint(exito,Vector3.zero,1f);
+            p=p+10;
+           nextPais();
+        }else{
+             AudioSource.PlayClipAtPoint(error,Vector3.zero,1f);
+            if(p!=0)
+             p=p-10;
+        }
+    }    
+ }
+
+   private void suecia(){
+    if(Time.timeScale != 0f)
+    {
+        if(actual.CompareTag("Suecia")){
             acertados.Add(ahora);
             AudioSource.PlayClipAtPoint(exito,Vector3.zero,1f);
             p=p+10;

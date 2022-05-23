@@ -965,6 +965,8 @@ MonoBehaviour:
     nombre: Alemania
   - pais: {fileID: 8414099425918297856, guid: c3d6b9474b8053649a35f4b69308fd51, type: 3}
     nombre: Portugal
+  - pais: {fileID: 8624320989083429395, guid: 0b9ade673ad35ff49a8406f9f2f24ba3, type: 3}
+    nombre: Suecia
   pistas: {fileID: 307518089}
   puntos: {fileID: 819403740}
   puntosfinal: {fileID: 582996640}
