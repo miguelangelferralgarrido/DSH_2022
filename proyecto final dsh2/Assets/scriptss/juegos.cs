@@ -457,11 +457,14 @@ public class juegos : MonoBehaviour
     }
 
     private void pista(){
+          if(Time.timeScale != 0f)
+    {
         restante = restante -5f;
         if(restante < 0)
             restante = 0f;
         numpista++;
         pistas.text=NombreActual.Substring(0,numpista);
+    }
     }
     void nextPais(){
         
